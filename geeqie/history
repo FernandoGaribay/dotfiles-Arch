@@ -1,0 +1,16 @@
+#History lists
+
+[shortcuts]
+"Home[path]/home/fernando"
+"Desktop[path]/home/fernando/Desktop"
+"Collections[path]/home/fernando/.local/share/geeqie/collections"
+
+[path_list]
+"/home/fernando/Wallpapers"
+"/home/fernando/.config/rofi"
+
+[image_list]
+"/home/fernando/Wallpapers/1310342.jpg"
+"/home/fernando/.config/rofi/rofi.png"
+
+#end
