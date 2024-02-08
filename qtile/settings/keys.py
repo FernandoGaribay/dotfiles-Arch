@@ -1,9 +1,7 @@
-# Qtile keybindings
+from libqtile.config import Click, Drag, Key 
+from libqtile.lazy import lazy
 
-from libqtile.config import Key
-from libqtile.command import lazy
-
-mod = "mod4"
+from settings.variables import *
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -40,10 +38,19 @@ keys = [
     Key([mod], "Return", lazy.spawn("alacritty"), desc="Launch terminal"),
 
     # Teclas para lanzar menu rofi
-    Key([mod], "m", lazy.spawn("rofi -show drun"), desc="Abrir menu Rofi"),
+    Key([mod], "m", lazy.spawn("rofi -show drun -display-drun \"Lanzar aplicación\""), desc="Abrir menu Rofi"),
 
     # Teclas para lanzar el navegador
     Key([mod, "control"], "f", lazy.spawn("firefox"), desc="Abrir firefox"),
+
+    # Teclas para lanzar el script de apagado
+    Key([mod], "BackSpace", lazy.spawn("bash /home/fernando/.config/qtile/shutdownOptions.sh"), desc="Script de apagado"),
+
+    # Teclas para lanzar ranger
+    Key([mod], "e", lazy.spawn("alacritty -e ranger")),
+
+    # Teclas para lanzar thunar
+    Key([mod, "shift"], "e", lazy.spawn("thunar")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -58,4 +65,11 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+]
+
+# Drag floating layouts.
+mouse = [
+    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
