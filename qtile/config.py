@@ -32,6 +32,7 @@ from settings.keys import *
 from settings.groups import *
 from settings.screens import *
 from settings.layouts import *
+from settings.variables import *
 
 
 

@@ -6,7 +6,7 @@ from settings.variables import *
 layout_conf_screen1 = {
     'border_focus': colorFecha,
     'border_width': 2,
-    'margin': 15,
+    'margin': 8,
     'margin_on_single': True
 }
 
@@ -19,7 +19,7 @@ layout_conf_screen2 = {
 
 layouts = [
     layout.MonadTall(**layout_conf_screen1),
-    layout.Max(),
+    layout.Max(margin=[0,10,5,10]),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),

@@ -14,6 +14,8 @@ case "$seleccion" in
         ;;
     "$SUSPENDER")
 	systemctl suspend
+	sleep 5
+	dm-tool switch-to-greeter
 	;;
     "$REINICIAR")
         systemctl reboot
