@@ -43,5 +43,10 @@ sudo pacman -Scc --noconfirm
 rm $essential_packages_file
 rm $packages_to_remove_file
 
-# Reiniciar el sistema
-sudo reboot
+# Preguntar al usuario si desea reiniciar el sistema
+read -p "¿Desea reiniciar el sistema ahora? (s/n): " answer
+case $answer in
+    [Ss]* ) sudo reboot;;
+    [Nn]* ) echo "El sistema no se reiniciará."; exit;;
+    * ) echo "Respuesta no válida. El sistema no se reiniciará."; exit;;
+esac
