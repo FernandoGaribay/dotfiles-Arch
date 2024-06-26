@@ -8,6 +8,7 @@ essential_packages=(
     'linux-firmware'
     'sudo'
     'git'
+    'neofetch'
     'vim'
 )
 
