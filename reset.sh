@@ -5,14 +5,8 @@ essential_packages=(
     'base'
     'linux'
     'linux-firmware'
-    'bash'
-    'coreutils'
-    'filesystem'
-    'glibc'
-    'systemd'
-    'systemd-sysvcompat'
-    'pacman'
-    'hwdata' # Añadir cualquier otro paquete fundamental que cause problemas de dependencia
+    'git'
+    'vim'
 )
 
 # Marcar todos los paquetes instalados como dependencias
