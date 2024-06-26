@@ -3,8 +3,10 @@
 # Lista de paquetes a no borrar (fundamentales)
 essential_packages=(
     'base'
+    'base-devel'
     'linux'
     'linux-firmware'
+    'sudo'
     'git'
     'vim'
 )
