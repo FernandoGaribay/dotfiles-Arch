@@ -6,6 +6,8 @@ essential_packages=(
     'base-devel'
     'linux'
     'linux-firmware'
+    'grub'
+    'networkmanager'
     'sudo'
     'git'
     'neofetch'
