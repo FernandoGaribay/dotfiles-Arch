@@ -10,8 +10,17 @@ essential_packages=(
     'networkmanager'
     'sudo'
     'git'
-    'neofetch'
+    'fastfetch'
     'vim'
+    'cuda'
+    'lib32-nvidia-utils'
+    'lib32-opencl-nvidia'
+    'libvdpau'
+    'libxnvctrl'
+    'nvidia'
+    'nvidia-settings'
+    'nvidia-utils'
+    'opencl-nvidia'
 )
 
 # Marcar todos los paquetes instalados como dependencias
